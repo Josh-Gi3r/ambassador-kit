@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+# Q1 — was previously absent. Runs typecheck + tests + lint on every push.
+# Format checking is not blocking yet (will land once the existing tree is
+# fully `prettier --write`d), and ESLint is "report-only" for the same
+# reason.
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run check
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Lint (report-only)
+        continue-on-error: true
+        run: pnpm run lint

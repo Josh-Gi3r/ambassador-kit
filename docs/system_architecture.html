@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Full System Architecture</title>
+<style>
+body { margin: 0; padding: 20px; background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; max-width: 720px; margin: 0 auto; }
+*{margin:0;box-sizing:border-box}
+.s{padding:1.25rem 0;border-bottom:0.5px solid #ddd}
+.s:last-child{border-bottom:none}
+.sl{font-size:11px;letter-spacing:0.05em;color:#999;margin-bottom:10px;font-weight:500}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ec{background:#fff;border:0.5px solid #ddd;border-radius:12px;padding:14px 16px;transition:border-color 0.15s}
+.en{font-size:15px;font-weight:500;margin-bottom:2px}
+.ed{font-size:12px;color:#666;margin-bottom:8px;line-height:1.5}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0}
+.rh{background:#FCEBEB;color:#A32D2D}
+.rm{background:#FAEEDA;color:#854F0B}
+.rl{background:#EAF3DE;color:#3B6D11}
+.ri{background:#E6F1FB;color:#185FA5}
+.es{font-size:11px;color:#666;line-height:1.6;margin-top:4px}
+.es b{font-weight:500;color:#1a1a1a}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.ad{text-align:center;color:#999;font-size:16px;padding:6px 0}
+.sr{display:flex;align-items:stretch;background:#f5f5f0;border-radius:8px;overflow:hidden;margin-bottom:4px}
+.st{flex:1;padding:8px 10px;font-size:12px;color:#666;border-right:0.5px solid #ddd;text-align:center}
+.st:last-child{border-right:none}
+.st span{font-size:11px;color:#999;display:block;margin-bottom:2px}
+.st b{font-weight:500;color:#1a1a1a;display:block}
+.cn{display:flex;align-items:center;gap:8px;padding:2px 0}
+.cl{flex:1;height:0;border-top:0.5px dashed #ccc}
+.ct{font-size:11px;color:#999;white-space:nowrap}
+.mc{background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:12px 14px}
+.mt{font-size:13px;font-weight:500;margin-bottom:4px}
+.mb{font-size:12px;color:#666;line-height:1.6}
+.mb b{font-weight:500;color:#1a1a1a}
+.it{font-size:11px;color:#999;font-style:italic;margin-top:6px}
+.ph{border-left:3px solid #3B6D11;border-radius:0}
+.ph2{border-left:3px solid #185FA5;border-radius:0}
+.key{background:#f5f5f0;border-radius:8px;padding:10px 14px;margin-bottom:10px}
+.key-title{font-size:12px;font-weight:500;margin-bottom:4px}
+.key-body{font-size:12px;color:#666;line-height:1.6}
+.key-body b{font-weight:500;color:#1a1a1a}
+</style>
+</head>
+<body>
+<div style="padding:0.5rem 0">
+
+<div class="s">
+<div class="sl">01 // Endgames (what people are playing for)</div>
+
+<div class="row">
+<div class="ec" style="flex:2;min-width:200px">
+<div class="en">Evangelist (Token2049)</div>
+<div class="ed">Paid flight, hotel, food. 12 slots max. The face of the protocol at Asia's biggest crypto event.</div>
+<span class="pill rh">High risk</span><span class="pill rh">Fixed cost per head</span>
+<div class="es"><b>Award:</b> Admin recognizes the right person. Can happen at any level (L1+). Founding cohort is flexible.</div>
+<div class="es"><b>Maintain:</b> Consistency floor from award date through October. The maintenance period IS the selection.</div>
+<div class="es"><b>Confirm:</b> Badge holders in September get the commitment. Badge surviving = selected.</div>
+<div class="es"><b>Self-cleaning:</b> An Evangelist at L1 who isn't growing toward L2 is showing inconsistency. The same behavior that earns L2 is what maintains the badge. Stagnate and you lose it to someone rising.</div>
+</div>
+</div>
+
+<div class="g2" style="margin-bottom:10px">
+<div class="ec">
+<div class="en">Lead ambassador (L3)</div>
+<div class="ed">Manages a regional or track cohort. First step toward operations.</div>
+<span class="pill rm">Medium risk</span>
+<div class="es"><b>Award:</b> Proven L2 who activates others.</div>
+<div class="es"><b>Maintain:</b> Cohort stays active or title reverts.</div>
+</div>
+<div class="ec">
+<div class="en">Ecosystem lead (L4)</div>
+<div class="ed">Owns a corridor, market, or dev ecosystem.</div>
+<span class="pill rm">Medium risk</span>
+<div class="es"><b>Award:</b> Has shipped real outcomes.</div>
+<div class="es"><b>Maintain:</b> Measurable output every quarter.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="ec" style="flex:1">
+<div class="en">Full-time team (L5)</div>
+<div class="ed">The program is the longest job interview in crypto.</div>
+<span class="pill rl">Low risk (fully vetted)</span>
+<div class="es"><b>Award:</b> 6-12 months of L3/L4 performance. No resume needed. Months of public proof IS the proof.</div>
+</div>
+</div>
+
+<div class="key">
+<div class="key-title">Future Evangelist opportunities</div>
+<div class="key-body">Token2049 is the first cohort. Future Evangelist rounds (events, campaigns, cohorts) will be <b>L2+ only</b>. This makes L2 the permanent unlock for Evangelist eligibility long-term. The current founding round is flexible (L1+) because it's the first.</div>
+</div>
+</div>
+
+<div class="ad">|</div>
+
+<div class="s">
+<div class="sl">02 // Progression ladder</div>
+<div class="sr">
+<div class="st"><span>L0</span><b>Applicant</b>Applies + test</div>
+<div class="st"><span>L1</span><b>Contributor</b>Approved. Proving.</div>
+<div class="st"><span>L2</span><b>Ambassador</b>Permanent perks unlock.</div>
+<div class="st"><span>L3</span><b>Lead</b>Activates others.</div>
+<div class="st"><span>L4</span><b>Eco lead</b>Owns a market.</div>
+<div class="st"><span>L5</span><b>Full-time</b>Hired.</div>
+</div>
+<div class="cn">
+<span class="ct">Evangelist badge</span>
+<span class="cl"></span>
+<span class="ct">Parallel track. Attaches at any level. Independent of rank progression.</span>
+</div>
+<div class="key" style="margin-top:8px">
+<div class="key-title">L2 is a perks tier, not a gate</div>
+<div class="key-body">L2 unlocks permanent tools and resources to grow your community. For the founding cohort, Evangelists may exist at L1 or L2. After Token2049, Evangelist eligibility requires L2. The <b>behavior that earns L2</b> (consistency, quality, activity) is the <b>same behavior that maintains the Evangelist badge</b>. An Evangelist not growing toward L2 is visibly stagnating, and stagnation triggers badge loss. <b>The system self-cleans.</b></div>
+</div>
+<div class="it">Public sees L1, L2, and Evangelist badge. L3-L5 internal only.</div>
+</div>
+
+<div class="ad">|</div>
+
+<div class="s">
+<div class="sl">03 // Unified XP system</div>
+<div class="key">
+<div class="key-title">One pool, two input channels, decay on inactivity</div>
+<div class="key-body">XP works like airline miles. <b>Two ways to earn:</b> ambassador activity (X posts, community work, content, introductions) and TG app activity (swaps, quests, streaks, referrals). Both feed the same score. <b>Decay:</b> if you stop contributing from either channel, your score decays. Active TG app users can boost their ambassador standing. Active ambassadors can boost their TG app standing. <b>Phase 1:</b> ambassador scoring only (live via Apify + daily admin review). <b>Phase 2:</b> TG app XP merges in as automated input. The bridge unifies when the app launches.</div>
+</div>
+<div class="g2">
+<div class="mc">
+<div class="mt">Ambassador input channel</div>
+<div class="mb">X content quality, engagement, consistency. Community contribution. Telegram activity. Application quality. Admin override. <b>Live quantitative scoring via Apify. Daily qualitative review by admin.</b></div>
+</div>
+<div class="mc">
+<div class="mt">TG app input channel</div>
+<div class="mb">Swap volume. Quest completions. Streak maintenance. Referrals. Partner quest engagement. News feed reads. <b>Automated XP (Phase 2).</b></div>
+</div>
+</div>
+<div class="it" style="margin-top:8px">Score decay ensures XP reflects current commitment, not historical achievement. Miles expire if you don't fly.</div>
+</div>
+
+<div class="ad">|</div>
+
+<div class="s">
+<div class="sl">04 // Behavioral engine</div>
+<div class="g3" style="margin-bottom:10px">
+<div class="mc">
+<div class="mt">Action-reward loops</div>
+<div class="mb"><b>Phase 1:</b> Live scoring via Apify. Daily admin review. <b>Phase 2:</b> Automated quests with variable XP. Claim mechanics. Bonus drops. <b>Variable reward cadence keeps engagement unpredictable.</b></div>
+</div>
+<div class="mc">
+<div class="mt">Loss mechanics</div>
+<div class="mb">Evangelist badge strips on consistency failure. Rank drops publicly. Score decays on inactivity. Leads lose title on cohort failure. <b>The system handles enforcement automatically.</b></div>
+</div>
+<div class="mc">
+<div class="mt">Identity formation</div>
+<div class="mb">Public profiles. Track labels. Gold Evangelist badge. Bio integration. <b>The ambassador identity becomes part of who they are.</b></div>
+</div>
+</div>
+<div class="g3" style="margin-bottom:10px">
+<div class="mc">
+<div class="mt">Commitment deepening</div>
+<div class="mb">Every maintained week = visible investment. Score history visible. <b>Commitment deepens over time.</b></div>
+</div>
+<div class="mc">
+<div class="mt">Consistency engine</div>
+<div class="mb">7-day rolling comparison. Public trend (rising/falling/stable). Evangelist maintenance = trend must stay stable or rising. <b>The leaderboard tells the story.</b></div>
+</div>
+<div class="mc">
+<div class="mt">Social pressure</div>
+<div class="mb">Public leaderboard. Visible Evangelist eligible list. Rising/falling indicators. <b>Compete against people, not a bar.</b></div>
+</div>
+</div>
+<div class="g2">
+<div class="mc">
+<div class="mt">Identity formation</div>
+<div class="mb">Shared language. Insider access. Monthly rituals. Quarterly briefings. Evangelist as inner circle identity. <b>Ambassadors carry the protocol identity as their own.</b></div>
+</div>
+<div class="mc">
+<div class="mt">Admin control layer</div>
+<div class="mb">Thresholds. Badge toggles. Overrides. Quest config. Eligibility rules. Decay rates. <b>Everything feels organic. Admin configures the system.</b></div>
+</div>
+</div>
+</div>
+
+<div class="ad">|</div>
+
+<div class="s">
+<div class="sl">05 // Phase rollout</div>
+<div class="g2">
+<div class="mc ph">
+<div class="mt">Phase 1: Now (portal only)</div>
+<div class="mb">Evangelist badges awarded to recognized candidates.
+Maintenance rules active from award date.
+Live quantitative scoring via Apify.
+Daily qualitative review by admin.
+Public trend indicators on leaderboard.
+Score decay on inactivity.
+Comms: badge is living recognition, not a promise.
+Loss is automatic, system-enforced, positively framed.</div>
+</div>
+<div class="mc ph2">
+<div class="mt">Phase 2: TG app merges</div>
+<div class="mb">XP from app feeds unified score automatically.
+Quest completions replace manual observation.
+Streaks add daily cadence pressure.
+Both channels (portal + app) feed one pool.
+Decay accelerates if neither channel active.
+Future Evangelist rounds gated to L2+.
+Behavioral loops become self-sustaining.</div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

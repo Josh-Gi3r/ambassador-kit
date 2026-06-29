@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YourProtocol Behavioral System Architecture - Phased Timeline</title>
+<style>
+body { margin: 0; padding: 20px; background: #fff; display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+<svg width="100%" viewBox="0 0 680 1900" xmlns="http://www.w3.org/2000/svg" style="max-width:680px">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.th { font-size: 14px; font-weight: 500; fill: #1a1a1a; }
+.ts { font-size: 12px; fill: #666; }
+.arr { stroke: #666; stroke-width: 1.5; }
+
+/* Teal */
+.c-teal rect { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.5; }
+.c-teal .th { fill: #085041; }
+.c-teal .ts { fill: #0F6E56; }
+
+/* Purple */
+.c-purple rect { fill: #EEEDFE; stroke: #534AB7; stroke-width: 0.5; }
+.c-purple .th { fill: #3C3489; }
+.c-purple .ts { fill: #534AB7; }
+
+/* Amber */
+.c-amber rect { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.5; }
+.c-amber .th { fill: #633806; }
+.c-amber .ts { fill: #854F0B; }
+
+/* Coral */
+.c-coral rect { fill: #FAECE7; stroke: #993C1D; stroke-width: 0.5; }
+.c-coral .th { fill: #712B13; }
+.c-coral .ts { fill: #993C1D; }
+
+/* Blue */
+.c-blue rect { fill: #E6F1FB; stroke: #185FA5; stroke-width: 0.5; }
+.c-blue .th { fill: #0C447C; }
+.c-blue .ts { fill: #185FA5; }
+
+/* Green */
+.c-green rect { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 0.5; }
+.c-green .th { fill: #27500A; }
+.c-green .ts { fill: #3B6D11; }
+
+/* Pink */
+.c-pink rect { fill: #FBEAF0; stroke: #993556; stroke-width: 0.5; }
+.c-pink .th { fill: #72243E; }
+.c-pink .ts { fill: #993556; }
+
+/* Gray */
+.c-gray rect { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 0.5; }
+.c-gray .th { fill: #444441; }
+.c-gray .ts { fill: #5F5E5A; }
+</style>
+
+<text class="th" x="340" y="28" text-anchor="middle">YourProtocol behavioral system architecture</text>
+<text class="ts" x="340" y="46" text-anchor="middle">Phased timeline: what exists when, and what drives behavior at each stage</text>
+
+<!-- PHASE 1 -->
+<rect x="30" y="70" width="620" height="680" rx="16" fill="none" stroke="#999" stroke-width="0.5" stroke-dasharray="6 4"/>
+<g class="c-green"><rect x="30" y="70" width="130" height="26" rx="8"/><text class="th" x="95" y="87" text-anchor="middle">Phase 1: Now</text></g>
+<text class="ts" x="176" y="87">Mar-Jun 2026 / Portal only / Live scoring</text>
+
+<text class="ts" x="46" y="118">Public surface</text>
+<g class="c-teal">
+<rect x="50" y="130" width="580" height="100" rx="10"/>
+<text class="th" x="340" y="156" text-anchor="middle">Ambassador portal (YOUR_APP_DOMAIN)</text>
+<text class="ts" x="340" y="176" text-anchor="middle">Leaderboard / public profiles / badges / XP trend / Evangelist eligible status</text>
+<text class="ts" x="340" y="194" text-anchor="middle">Only public surface. Live quantitative XP. Daily qualitative review by admin.</text>
+</g>
+
+<line x1="340" y1="230" x2="340" y2="250" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text class="ts" x="46" y="264">Progression</text>
+<g class="c-blue">
+<rect x="50" y="274" width="360" height="44" rx="10"/>
+<text class="th" x="230" y="296" text-anchor="middle" dominant-baseline="central">L0 > L1 Contributor > L2 Ambassador</text>
+</g>
+<g class="c-coral">
+<rect x="430" y="274" width="200" height="44" rx="10"/>
+<text class="th" x="530" y="290" text-anchor="middle" dominant-baseline="central">Evangelist badge</text>
+<text class="ts" x="530" y="306" text-anchor="middle" dominant-baseline="central">Parallel / L1+ / founding</text>
+</g>
+
+<line x1="340" y1="318" x2="340" y2="344" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text class="ts" x="46" y="358">Behavioral engine (live + daily admin)</text>
+
+<g class="c-amber">
+<rect x="50" y="368" width="185" height="84" rx="10"/>
+<text class="th" x="142" y="392" text-anchor="middle">Live scoring</text>
+<text class="ts" x="142" y="410" text-anchor="middle">Apify every minute</text>
+<text class="ts" x="142" y="428" text-anchor="middle">TG export daily</text>
+</g>
+
+<g class="c-coral">
+<rect x="248" y="368" width="185" height="84" rx="10"/>
+<text class="th" x="340" y="392" text-anchor="middle">Consistency engine</text>
+<text class="ts" x="340" y="410" text-anchor="middle">7-day rolling comparison</text>
+<text class="ts" x="340" y="428" text-anchor="middle">Trend: rising / stable / falling</text>
+</g>
+
+<g class="c-purple">
+<rect x="446" y="368" width="185" height="84" rx="10"/>
+<text class="th" x="538" y="392" text-anchor="middle">Loss mechanics</text>
+<text class="ts" x="538" y="410" text-anchor="middle">Badge strips on inconsistency</text>
+<text class="ts" x="538" y="428" text-anchor="middle">Rank drops publicly</text>
+</g>
+
+<g class="c-teal">
+<rect x="50" y="468" width="185" height="84" rx="10"/>
+<text class="th" x="142" y="492" text-anchor="middle">Identity formation</text>
+<text class="ts" x="142" y="510" text-anchor="middle">Badges / profiles / bios</text>
+<text class="ts" x="142" y="528" text-anchor="middle">Gold Evangelist badge</text>
+</g>
+
+<g class="c-green">
+<rect x="248" y="468" width="185" height="84" rx="10"/>
+<text class="th" x="340" y="492" text-anchor="middle">Social pressure</text>
+<text class="ts" x="340" y="510" text-anchor="middle">Public leaderboard</text>
+<text class="ts" x="340" y="528" text-anchor="middle">Who's rising / falling</text>
+</g>
+
+<g class="c-pink">
+<rect x="446" y="468" width="185" height="84" rx="10"/>
+<text class="th" x="538" y="492" text-anchor="middle">Commitment depth</text>
+<text class="ts" x="538" y="510" text-anchor="middle">XP history visible</text>
+<text class="ts" x="538" y="528" text-anchor="middle">Deeper investment over time</text>
+</g>
+
+<line x1="340" y1="552" x2="340" y2="578" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text class="ts" x="46" y="592">Evangelist lifecycle (Phase 1)</text>
+<g class="c-coral">
+<rect x="50" y="602" width="140" height="56" rx="10"/>
+<text class="th" x="120" y="622" text-anchor="middle" dominant-baseline="central">Award</text>
+<text class="ts" x="120" y="640" text-anchor="middle" dominant-baseline="central">Admin recognizes</text>
+</g>
+<line x1="190" y1="630" x2="210" y2="630" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-amber">
+<rect x="210" y="602" width="140" height="56" rx="10"/>
+<text class="th" x="280" y="622" text-anchor="middle" dominant-baseline="central">Maintain</text>
+<text class="ts" x="280" y="640" text-anchor="middle" dominant-baseline="central">Consistency floor held</text>
+</g>
+<line x1="350" y1="630" x2="370" y2="630" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-green">
+<rect x="370" y="602" width="140" height="56" rx="10"/>
+<text class="th" x="440" y="622" text-anchor="middle" dominant-baseline="central">Confirm (Sep)</text>
+<text class="ts" x="440" y="640" text-anchor="middle" dominant-baseline="central">Badge survived = selected</text>
+</g>
+<line x1="510" y1="630" x2="530" y2="630" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-teal">
+<rect x="530" y="602" width="100" height="56" rx="10"/>
+<text class="th" x="580" y="624" text-anchor="middle" dominant-baseline="central">the program summit</text>
+<text class="ts" x="580" y="642" text-anchor="middle" dominant-baseline="central">Oct 2026</text>
+</g>
+
+<g class="c-gray">
+<rect x="50" y="680" width="580" height="56" rx="8"/>
+<text class="ts" x="340" y="700" text-anchor="middle">Self-cleaning: stagnant badge holders lose to rising ambassadors.</text>
+<text class="ts" x="340" y="718" text-anchor="middle">L2 behavior = badge maintenance. No confrontation needed.</text>
+</g>
+
+<!-- PHASE 2 -->
+<line x1="340" y1="750" x2="340" y2="790" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+<rect x="30" y="790" width="620" height="580" rx="16" fill="none" stroke="#999" stroke-width="0.5" stroke-dasharray="6 4"/>
+<g class="c-blue"><rect x="30" y="790" width="200" height="26" rx="8"/><text class="th" x="130" y="807" text-anchor="middle">Phase 2: TG app merges</text></g>
+<text class="ts" x="244" y="807">Jun-Sep 2026 / Two surfaces / Automated XP</text>
+
+<text class="ts" x="46" y="838">Public surfaces (now two)</text>
+<g class="c-teal">
+<rect x="50" y="850" width="280" height="80" rx="10"/>
+<text class="th" x="190" y="876" text-anchor="middle">Ambassador portal</text>
+<text class="ts" x="190" y="894" text-anchor="middle">Same as Phase 1 + XP visible</text>
+<text class="ts" x="190" y="912" text-anchor="middle">Score now fed by both channels</text>
+</g>
+
+<g class="c-purple">
+<rect x="350" y="850" width="280" height="80" rx="10"/>
+<text class="th" x="490" y="876" text-anchor="middle">Telegram mini app</text>
+<text class="ts" x="490" y="894" text-anchor="middle">Quests / XP / streaks / levels</text>
+<text class="ts" x="490" y="912" text-anchor="middle">Trading / referrals / news feed</text>
+</g>
+
+<line x1="190" y1="930" x2="270" y2="958" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<line x1="490" y1="930" x2="410" y2="958" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-amber">
+<rect x="140" y="956" width="400" height="56" rx="10"/>
+<text class="th" x="340" y="978" text-anchor="middle" dominant-baseline="central">Unified XP (airline miles model)</text>
+<text class="ts" x="340" y="996" text-anchor="middle" dominant-baseline="central">Two input channels / one pool / decay if neither active</text>
+</g>
+
+<line x1="340" y1="1012" x2="340" y2="1038" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text class="ts" x="46" y="1052">Behavioral engine (automated)</text>
+
+<g class="c-teal">
+<rect x="50" y="1062" width="185" height="84" rx="10"/>
+<text class="th" x="142" y="1086" text-anchor="middle">Quest loops</text>
+<text class="ts" x="142" y="1104" text-anchor="middle">Daily / weekly quests</text>
+<text class="ts" x="142" y="1122" text-anchor="middle">Variable XP / claim buttons</text>
+</g>
+
+<g class="c-coral">
+<rect x="248" y="1062" width="185" height="84" rx="10"/>
+<text class="th" x="340" y="1086" text-anchor="middle">Streak mechanics</text>
+<text class="ts" x="340" y="1104" text-anchor="middle">3-day / 7-day / 30-day</text>
+<text class="ts" x="340" y="1122" text-anchor="middle">Break = visible loss</text>
+</g>
+
+<g class="c-purple">
+<rect x="446" y="1062" width="185" height="84" rx="10"/>
+<text class="th" x="538" y="1086" text-anchor="middle">Referral engine</text>
+<text class="ts" x="538" y="1104" text-anchor="middle">Invite = XP for both</text>
+<text class="ts" x="538" y="1122" text-anchor="middle">Viral growth loop</text>
+</g>
+
+<g class="c-gray">
+<rect x="50" y="1166" width="580" height="56" rx="8"/>
+<text class="ts" x="340" y="1186" text-anchor="middle">+ All Phase 1 mechanics still running: consistency engine,</text>
+<text class="ts" x="340" y="1204" text-anchor="middle">loss mechanics, identity formation, social proof, commitment deepening</text>
+</g>
+
+<line x1="340" y1="1210" x2="340" y2="1236" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-coral">
+<rect x="100" y="1236" width="480" height="44" rx="10"/>
+<text class="th" x="340" y="1252" text-anchor="middle" dominant-baseline="central">Evangelist maintenance now backed by hard data</text>
+<text class="ts" x="340" y="1270" text-anchor="middle" dominant-baseline="central">Not admin judgment alone. Quest completions, streaks, XP velocity all measurable.</text>
+</g>
+
+<line x1="340" y1="1280" x2="340" y2="1306" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-green">
+<rect x="100" y="1306" width="480" height="44" rx="10"/>
+<text class="ts" x="340" y="1332" text-anchor="middle" dominant-baseline="central">Behavioral loops become self-sustaining. Admin shifts from scoring to strategy.</text>
+</g>
+
+<!-- PHASE 3 -->
+<line x1="340" y1="1370" x2="340" y2="1410" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+<rect x="30" y="1410" width="620" height="280" rx="16" fill="none" stroke="#999" stroke-width="0.5" stroke-dasharray="6 4"/>
+<g class="c-purple"><rect x="30" y="1410" width="230" height="26" rx="8"/><text class="th" x="145" y="1427" text-anchor="middle">Phase 3: Post-the program summit</text></g>
+<text class="ts" x="274" y="1427">Oct 2026+ / Full system / Self-sustaining</text>
+
+<g class="c-amber">
+<rect x="50" y="1452" width="280" height="100" rx="10"/>
+<text class="th" x="190" y="1476" text-anchor="middle">Future Evangelists</text>
+<text class="ts" x="190" y="1496" text-anchor="middle">L2+ only from here</text>
+<text class="ts" x="190" y="1514" text-anchor="middle">New events, new cohorts</text>
+<text class="ts" x="190" y="1532" text-anchor="middle">L2 = permanent eligibility gate</text>
+</g>
+
+<g class="c-blue">
+<rect x="350" y="1452" width="280" height="100" rx="10"/>
+<text class="th" x="490" y="1476" text-anchor="middle">Full progression live</text>
+<text class="ts" x="490" y="1496" text-anchor="middle">L3 Lead / L4 Eco Lead / L5 FT</text>
+<text class="ts" x="490" y="1514" text-anchor="middle">Pipeline proven by the program summit</text>
+<text class="ts" x="490" y="1532" text-anchor="middle">First hires from program</text>
+</g>
+
+<line x1="340" y1="1564" x2="340" y2="1594" stroke="#999" stroke-width="0.5" marker-end="url(#arrow)"/>
+<g class="c-pink">
+<rect x="100" y="1594" width="480" height="76" rx="10"/>
+<text class="th" x="340" y="1620" text-anchor="middle">Identity formation complete</text>
+<text class="ts" x="340" y="1640" text-anchor="middle">Identity locked. Rituals established. Shared language. Insider status.</text>
+<text class="ts" x="340" y="1658" text-anchor="middle">Ambassadors carry the YourProtocol identity as their own. They are YourProtocol.</text>
+</g>
+
+<g class="c-gray">
+<rect x="100" y="1710" width="480" height="56" rx="10"/>
+<text class="th" x="340" y="1732" text-anchor="middle" dominant-baseline="central">Admin control layer (runs across all phases)</text>
+<text class="ts" x="340" y="1752" text-anchor="middle" dominant-baseline="central">Everything above feels organic. Admin configures thresholds, badges, and rules.</text>
+</g>
+
+</svg>
+</body>
+</html>
